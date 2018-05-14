@@ -1,7 +1,7 @@
 package com.example.kcruz.labo6drawer;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.kcruz.labo6drawer.fragments.RestaurantIntroductionFragment;
+import com.example.kcruz.labo6drawer.fragments.RestaurantMenuListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.item2:
+                        RestaurantMenuListFragment frag2 = new RestaurantMenuListFragment();
+                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
+                        //frag.setArguments(bundle);
+
+                        FragmentManager fragmentManager2 = getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+
+                        fragmentTransaction2.replace(R.id.frameLayout, frag2);
+                        fragmentTransaction2.commit();
                         break;
                     case R.id.item3:
                         break;
@@ -64,6 +76,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+   /* PARA CUANDO TENGA DOS LISTAS
+   public void switchContent(Fragment fragment, String tag) {
+
+        FragmentManager fm = getSupportFragmentManager();
+        while (fm.popBackStackImmediate());
+
+        if (fragment != null){
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id., fragment, tag);
+
+            //Solo FavoriteListFragment se agrega al backStack
+
+            if(!(fragment instanceof ProductListFragment)){
+                transaction.addToBackStack(tag);
+            }
+            transaction.commit();
+            contentF = fragment;
+        }
+    }*/
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
