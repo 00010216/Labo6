@@ -28,13 +28,14 @@ public class RestaurantMenuListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = getActivity();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_information_view,container,false);
+        View view = inflater.inflate(R.layout.fragment_menu_list,container,false);
 
-        findViewsById(view);
+        restaurantMenuView = (RecyclerView) view.findViewById(R.id.list_menu);
         restaurantMenuView.setHasFixedSize(true);
 
         lManager = new LinearLayoutManager(container.getContext());
@@ -47,12 +48,7 @@ public class RestaurantMenuListFragment extends Fragment {
         return view;
     }
 
-    private void findViewsById(View view) {
-        restaurantMenuView = (RecyclerView) view.findViewById(R.id.recycler_restaurant_menu);
-    }
-
     public void setMenu(){
-
         Dish dish1 = new Dish("lunch",R.drawable.burger,"Cheesebuger","Hamburger with meat, tomatoes, lettce and extra cheese");
         Dish dish2 = new Dish("lunch",R.drawable.sandwich,"Sandwich","Hamburger with meat, tomatoes, lettce and extra cheese");
         Dish dish3 = new Dish("lunch",R.drawable.soup,"Chicken noodle soup","Hamburger with meat, tomatoes, lettce and extra cheese");
