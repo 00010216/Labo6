@@ -19,8 +19,8 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MenuVi
     List<Dish> menu;
 
     public MenuListAdapter(Context mContext, List<Dish> mMenu) {
-        context = context;
-        menu = menu;
+        context = mContext;
+        menu = mMenu;
     }
 
     public static class MenuViewHolder extends RecyclerView.ViewHolder {
@@ -40,7 +40,7 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MenuVi
 
     @Override
     public MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.cardview_item,parent,false);
         return (new MenuViewHolder(view));
     }
 
