@@ -1,13 +1,21 @@
 package com.example.kcruz.labo6drawer.models;
 
-public class RestaurantMenu {
+public class Dish {
     private String type; //breakfast, lunch, dinner
     private int photo;
-    private String dish;
+    private String name;
     private String description;
 
-    public RestaurantMenu() {
+    public Dish() {
     }
+
+    public Dish(String lunch, int burger, String cheesebuger, String s) {
+        this.type = type;
+        this.photo = photo;
+        this.name = name;
+        this.description = description;
+    }
+
 
     public int getPhoto() {
         return photo;
@@ -25,12 +33,12 @@ public class RestaurantMenu {
         this.type = type;
     }
 
-    public String getDish() {
-        return dish;
+    public String getName() {
+        return name;
     }
 
-    public void setDish(String dish) {
-        this.dish = dish;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
