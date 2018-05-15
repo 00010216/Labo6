@@ -1,4 +1,4 @@
-package com.example.kcruz.labo6drawer;
+package com.example.kcruz.labo6drawer.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.kcruz.labo6drawer.R;
 
 public class RestaurantIntroductionFragment extends Fragment {
 
