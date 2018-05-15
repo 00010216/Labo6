@@ -62,4 +62,10 @@ public class RestaurantDinnerMenuListFragment extends Fragment {
         menu.add(dish4);
         menu.add(dish5);
     }
+
+    @Override
+    public void onResume() {
+        getActivity().setTitle(R.string.dinner);
+        super.onResume();
+    }
 }

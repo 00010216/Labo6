@@ -21,4 +21,10 @@ public class RestaurantIntroductionFragment extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onResume() {
+        getActivity().setTitle(R.string.about);
+        super.onResume();
+    }
 }
