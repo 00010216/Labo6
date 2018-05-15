@@ -19,4 +19,10 @@ public class RestaurantOffersFragment extends Fragment{
 
         return view;
     }
+
+    @Override
+    public void onResume() {
+        getActivity().setTitle(R.string.offers);
+        super.onResume();
+    }
 }
