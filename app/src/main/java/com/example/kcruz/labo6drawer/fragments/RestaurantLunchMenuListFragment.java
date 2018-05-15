@@ -17,7 +17,7 @@ import com.example.kcruz.labo6drawer.models.Dish;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestaurantMenuListFragment extends Fragment {
+public class RestaurantLunchMenuListFragment extends Fragment {
     Activity activity;
     MenuListAdapter menuListAdapter;
     RecyclerView restaurantMenuView;
