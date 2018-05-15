@@ -16,6 +16,7 @@ import com.example.kcruz.labo6drawer.fragments.RestaurantBreakfastMenuListFragme
 import com.example.kcruz.labo6drawer.fragments.RestaurantDinnerMenuListFragment;
 import com.example.kcruz.labo6drawer.fragments.RestaurantIntroductionFragment;
 import com.example.kcruz.labo6drawer.fragments.RestaurantLunchMenuListFragment;
+import com.example.kcruz.labo6drawer.fragments.RestaurantOffersFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item2:
                         RestaurantLunchMenuListFragment frag2 = new RestaurantLunchMenuListFragment();
-                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
-                        //frag.setArguments(bundle);
 
                         FragmentManager fragmentManager2 = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
@@ -69,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item3:
                         RestaurantDinnerMenuListFragment frag3 = new RestaurantDinnerMenuListFragment();
-                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
-                        //frag.setArguments(bundle);
 
                         FragmentManager fragmentManager3 = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
@@ -80,14 +77,21 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item4:
                         RestaurantBreakfastMenuListFragment frag4 = new RestaurantBreakfastMenuListFragment();
-                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
-                        //frag.setArguments(bundle);
 
                         FragmentManager fragmentManager4 = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction4 = fragmentManager4.beginTransaction();
 
                         fragmentTransaction4.replace(R.id.frameLayout, frag4);
                         fragmentTransaction4.commit();
+                        break;
+                    case R.id.item5:
+                        RestaurantOffersFragment frag5 = new RestaurantOffersFragment();
+
+                        FragmentManager fragmentManager5 = getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction5 = fragmentManager5.beginTransaction();
+
+                        fragmentTransaction5.replace(R.id.frameLayout, frag5);
+                        fragmentTransaction5.commit();
                         break;
                 }
 
@@ -97,26 +101,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-   /* PARA CUANDO TENGA DOS LISTAS
-   public void switchContent(Fragment fragment, String tag) {
-
-        FragmentManager fm = getSupportFragmentManager();
-        while (fm.popBackStackImmediate());
-
-        if (fragment != null){
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id., fragment, tag);
-
-            //Solo FavoriteListFragment se agrega al backStack
-
-            if(!(fragment instanceof ProductListFragment)){
-                transaction.addToBackStack(tag);
-            }
-            transaction.commit();
-            contentF = fragment;
-        }
-    }*/
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
