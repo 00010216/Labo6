@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.kcruz.labo6drawer.fragments.RestaurantBreakfastMenuListFragment;
+import com.example.kcruz.labo6drawer.fragments.RestaurantDinnerMenuListFragment;
 import com.example.kcruz.labo6drawer.fragments.RestaurantIntroductionFragment;
 import com.example.kcruz.labo6drawer.fragments.RestaurantLunchMenuListFragment;
 
@@ -66,6 +68,26 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction2.commit();
                         break;
                     case R.id.item3:
+                        RestaurantDinnerMenuListFragment frag3 = new RestaurantDinnerMenuListFragment();
+                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
+                        //frag.setArguments(bundle);
+
+                        FragmentManager fragmentManager3 = getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
+
+                        fragmentTransaction3.replace(R.id.frameLayout, frag3);
+                        fragmentTransaction3.commit();
+                        break;
+                    case R.id.item4:
+                        RestaurantBreakfastMenuListFragment frag4 = new RestaurantBreakfastMenuListFragment();
+                        //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
+                        //frag.setArguments(bundle);
+
+                        FragmentManager fragmentManager4 = getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction4 = fragmentManager4.beginTransaction();
+
+                        fragmentTransaction4.replace(R.id.frameLayout, frag4);
+                        fragmentTransaction4.commit();
                         break;
                 }
 
