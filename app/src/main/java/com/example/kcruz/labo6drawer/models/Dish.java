@@ -9,7 +9,7 @@ public class Dish {
     public Dish() {
     }
 
-    public Dish(String lunch, int burger, String cheesebuger, String s) {
+    public Dish(String type, int photo, String name, String description) {
         this.type = type;
         this.photo = photo;
         this.name = name;
