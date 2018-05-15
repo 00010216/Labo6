@@ -1,6 +1,5 @@
 package com.example.kcruz.labo6drawer;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -14,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.kcruz.labo6drawer.fragments.RestaurantIntroductionFragment;
-import com.example.kcruz.labo6drawer.fragments.RestaurantMenuListFragment;
+import com.example.kcruz.labo6drawer.fragments.RestaurantLunchMenuListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.item2:
-                        RestaurantMenuListFragment frag2 = new RestaurantMenuListFragment();
+                        RestaurantLunchMenuListFragment frag2 = new RestaurantLunchMenuListFragment();
                         //RestaurantIntroductionFragment frag = new RestaurantIntroductionFragment();
                         //frag.setArguments(bundle);
 
