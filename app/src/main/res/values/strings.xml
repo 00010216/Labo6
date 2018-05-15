@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">Labo6Drawer</string>
+    <string name="app_name">Gourmet</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="lunch">Lunch menu</string>
+    <string name="breakfast">Breakfast menu</string>
+    <string name="dinner">Dinner menu</string>
+    <string name="about">About us</string>
+    <string name="offers">Offers</string>
+    <string name="description">GouRmet restaurant was founded by the Culver family in 1984, which eventually branched out to more than 300 franchised restaurants all over the US. Culver’s is well-known for its ButterBurger, which made the restaurant extremely famous. They also have other items which include salads, sandwiches, desserts, etc.</string>
+    <string name="offers_description">"Today's best offer is: 20% off orders over $100. Verified Today"</string>
 </resources>
