@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     card_view:cardUseCompatPadding="true"
     android:elevation="7dp"
-    card_view:cardCornerRadius="2dp">
+    card_view:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="175dp">
+            android:layout_height="165dp">
 
             <ImageView
                 android:id="@+id/img"
@@ -42,24 +42,20 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="4dp"
                 android:gravity="center_vertical"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 android:text="Text"/>
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="4dp"
                 android:gravity="center_vertical"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:text="Text"/>
 
         </LinearLayout>
